@@ -1,6 +1,6 @@
 
 <section class="d-flex align-items-center">
-	<div class="container-lg px-5">
+	<div class="container-lg px-5"  data-aos="zoom-in">
 		<div class="py-5 mx-auto text-center px-2">
 			<p class="fw-normal">
 				Layanan cloud hosting indonesia terbaik dengan teknologi andal untuk website anda <br> <strong class="text-primary"> Diskon Hingga 50%!</strong> 

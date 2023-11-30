@@ -54,5 +54,3 @@
    </nav>
  </div>
 </div>
-
-<button class="btn btn-primary fixed-bottom rounded-circle" style="left: 90%; width: 4rem; height: 4rem;">Hahaha</button>

@@ -1,5 +1,5 @@
 <section class="bg-primary d-flex align-items-center" style="background: url('https://www.qwords.com/wp-content/themes/qwords/assets/images/shapes/search-domain-bg.png')">
-	<div class="container-lg">
+	<div class="container-lg" id="domain-checker" data-aos="zoom-in">
 		<div class="w-50 mt-3 text-white text-center mx-auto">
 			<div class="py-5 px-2">
 				<p class="fs-1 mt-3 mb-0 text-white fw-bold">

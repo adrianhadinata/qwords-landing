@@ -14,6 +14,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&family=Secular+One&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <style type="text/css">
        * { 
             font-family: 'Plus Jakarta Sans', sans-serif
@@ -31,19 +33,26 @@
       @include('components/parts/banner')
       @include('components/parts/domain-checker')
       @include('components/parts/package')
-      @include('components/parts/contact')
+      {{-- @include('components/parts/contact') --}}
       @include('components/base/footer')
+      @include('components/parts/sticky')
    </div>
 
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="/assets/js/lottie-player.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+
 
 <script>
     $(document).ready(function(){
         const NavBar = $("#navbar");
 
         $(window).scroll(function(e) {
+
             if($(document).scrollTop() > 0) {
                 NavBar.removeClass("bg-transparent");
                 NavBar.addClass("bg-white");
@@ -51,6 +60,7 @@
                 NavBar.removeClass("bg-white");
                 NavBar.addClass("bg-transparent");
             }
+
         });
 
         setTimeout(() => {
@@ -63,6 +73,19 @@
             $("#dicount-percentage").addClass("animate__heartBeat animate__slow animate__infinite");
         }, 4800);
         
+        $("#button-help").on("click", function() {
+            if ($(".wrapper").hasClass("wrapper-hide")) {
+                $(".wrapper").removeClass("wrapper-hide");
+                $(".wrapper").addClass("wrapper-show");
+                $("#icon-help").removeClass("bx-phone");
+                $("#icon-help").addClass("bx-minus");
+            } else {
+                $(".wrapper").removeClass("wrapper-show");
+                $(".wrapper").addClass("wrapper-hide");
+                $("#icon-help").removeClass("bx-minus");
+                $("#icon-help").addClass("bx-phone");
+            }
+        })
 
     });
 </script>
